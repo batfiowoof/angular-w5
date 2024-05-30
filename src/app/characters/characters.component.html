@@ -1,5 +1,15 @@
 <div class="container" *ngIf="anime">
   <div class="card">
-    <h1 class="card-header">{{ anime[0].name }}</h1>
+    <a class="card-header" routerLink="">Show me a random anime!</a>
+
+    <h1 class="card-header">{{ anime[0].character.name }}</h1>
+    <img
+      src="{{ anime[0].character.images.jpg.image_url }}"
+      alt="Sample image"
+    />
+    <h1 class="card-header">{{ anime[0].role }}</h1>
+    <button class="card-header" (click)="refresh()">
+      Show me another random character!
+    </button>
   </div>
 </div>

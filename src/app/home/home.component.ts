@@ -13,7 +13,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 export class HomeComponent implements OnInit {
   anime: any;
 
-  randomAnimeId = Math.floor(Math.random() * 1000);
+  randomAnimeId = Math.floor(Math.random() * 100 + 1);
 
   ngOnInit(): void {
     this.fetchAnime(this.randomAnimeId);
@@ -25,7 +25,11 @@ export class HomeComponent implements OnInit {
   fetchAnime(id: number): void {
     this.animeService.getAnime(id).subscribe(
       (data: any) => (this.anime = data.data),
-      (error) => console.error('Error fetching anime', error)
+      (error) => alert('No anime ID found, please try again.')
     );
+  }
+
+  refresh(): void {
+    window.location.reload();
   }
 }

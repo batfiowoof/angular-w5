@@ -3,8 +3,14 @@
     <a href="{{ anime.url }}"
       ><h1 class="card-header">{{ anime.title }}</h1></a
     >
-    <a class="card-header" routerLink="characters">Characters</a>
+    <a class="card-header" routerLink="characters"
+      >Show me a random character!</a
+    >
     <img src="{{ anime.images.jpg.image_url }}" alt="Sample image" />
     <p class="card-body">{{ anime.synopsis }}</p>
+
+    <button class="card-header" (click)="refresh()">
+      Show me another random anime!
+    </button>
   </div>
 </div>
