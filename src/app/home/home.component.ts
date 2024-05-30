@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
   fetchAnime(id: number): void {
     this.animeService.getAnime(id).subscribe(
       (data: any) => (this.anime = data.data),
-      (error) => alert('No anime ID found, please try again.')
+      (error) => alert('No anime ID found, please try again. ' + error.message)
     );
   }
 

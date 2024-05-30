@@ -24,7 +24,8 @@ export class CharactersComponent implements OnInit {
   fetchCharacters(id: number): void {
     this.animeService.getCharacters(id).subscribe(
       (data: any) => (this.anime = data.data),
-      (error) => alert('No character ID found, please try again.')
+      (error) =>
+        alert('No character ID found, please try again.' + error.message)
     );
   }
 
