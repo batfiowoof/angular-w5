@@ -1,5 +1,7 @@
 # AngularW5
 
+An Angular Project utilizing the Jikan Public API for generating and fetching random anime data.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
 
 ## Development server
