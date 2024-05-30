@@ -1,0 +1,10 @@
+<div class="container" *ngIf="anime">
+  <div class="card">
+    <a href="{{ anime.url }}"
+      ><h1 class="card-header">{{ anime.title }}</h1></a
+    >
+    <a class="card-header" routerLink="characters">Characters</a>
+    <img src="{{ anime.images.jpg.image_url }}" alt="Sample image" />
+    <p class="card-body">{{ anime.synopsis }}</p>
+  </div>
+</div>

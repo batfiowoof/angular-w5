@@ -11,6 +11,10 @@ export class AnimeService {
   constructor(private http: HttpClient) {}
 
   getAnime(id: number): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}/${id}`);
+    return this.http.get<any>(`${this.baseUrl}/${id}/full`);
+  }
+
+  getCharacters(id: number): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}/${id}/characters`);
   }
 }
